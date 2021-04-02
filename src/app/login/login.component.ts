@@ -18,16 +18,14 @@ export class LoginComponent implements OnInit {
     
   }
   msg:string=""
-
+  
   checkUser(){
     console.log(this.loginsRef.value); // this is to disply all value , 
     let user1 = this.loginsRef.get("user")?.value; // this is to get specific  control value.
     let pass1 = this.loginsRef.get("pass")?.value;
     console.log(user1+""+pass1);
     if (user1=="jesper" && pass1=="1234"){
-      this.msg= "Sucessfully Login";
-      
-    this.route.navigate(["home"]);
+      this.msg= "Sucessfully Login"
       this.route.navigate(["home"]);
     }else{
       this.msg = "failure try once ";
